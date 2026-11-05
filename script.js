@@ -342,6 +342,10 @@
         const values = getValues();
         const saved = saveDraft();
         const total = bookingEstimate ? bookingEstimate.textContent : '';
+                // Сохраняем заявку для админки
+        const orders = storage.read('kadr_orders') || [];
+        orders.push({ ...values, status: 'Новая', created: new Date().toISOString() });
+        storage.write('kadr_orders', orders);
         const date = /^\d{4}-\d{2}-\d{2}$/.test(values.date) ? values.date.split('-').reverse().join('.') : values.date;
         const body = [
           'Здравствуйте! Хочу уточнить возможность бронирования фотостудии КАДР.',
