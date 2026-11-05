@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f3ec">
+  <meta name="robots" content="noindex, nofollow">
+  <title>КАДР — Панель администратора</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="admin" id="top" class="admin-body">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="КАДР — главная"><svg class="brand-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M12 3H3v9M20 3h9v9M29 20v9h-9M12 29H3v-9" stroke="currentColor" stroke-width="2.5"/><circle cx="16" cy="16" r="5" fill="currentColor"/></svg><span class="brand-name">КАДР<span class="brand-caption">ADMIN PANEL</span></span></a>
+      <div class="header-actions">
+        <a class="button button-outline" href="index.html">На сайт <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="container section">
+    <!-- ЭКРАН ВХОДА -->
+    <div id="adminLogin" class="admin-login">
+      <div class="booking-panel" style="max-width: 400px; margin: 100px auto;">
+        <h2 style="margin-bottom: 20px; font-size: 28px;">Вход в панель</h2>
+        <p class="muted" style="margin-bottom: 25px;">Введите пароль администратора для управления заявками и контентом.</p>
+        <form id="loginForm" class="booking-form">
+          <div class="field">
+            <label for="adminPass">Пароль <span>*</span></label>
+            <input id="adminPass" name="pass" type="password" placeholder="••••••" required>
+          </div>
+          <button type="submit" class="button button-dark" style="width: 100%;">Войти <span aria-hidden="true">↗</span></button>
+          <p id="loginError" style="color: red; font-size: 12px; display: none;">Неверный пароль. Попробуйте «admin».</p>
+        </form>
+      </div>
+    </div>
+
+    <!-- ПАНЕЛЬ УПРАВЛЕНИЯ -->
+    <div id="adminPanel" hidden>
+      <div class="heading-row">
+        <div><p class="eyebrow">Управление студией</p><h1 class="page-heading">Панель<br>администратора.</h1></div>
+        <button class="text-link" id="logoutBtn" type="button">Выйти <span aria-hidden="true">↗</span></button>
+      </div>
+
+      <div class="grid-2" style="align-items: start; gap: 40px;">
+        <!-- ЗАЯВКИ -->
+        <div class="admin-section">
+          <h2 class="section-heading" style="font-size: 32px; margin-bottom: 20px;">Заявки на съёмку</h2>
+          <div id="adminOrdersList" class="admin-list">
+            <!-- Сюда JS вставит заявки -->
+          </div>
+        </div>
+
+        <!-- ОТЗЫВЫ И ЦЕНЫ -->
+        <div style="display: grid; gap: 40px;">
+          <div class="admin-section">
+            <h2 class="section-heading" style="font-size: 32px; margin-bottom: 20px;">Отзывы</h2>
+            <div id="adminReviewsList" class="admin-list">
+              <!-- Сюда JS вставит отзывы -->
+            </div>
+          </div>
+
+          <div class="admin-section">
+            <h2 class="section-heading" style="font-size: 32px; margin-bottom: 20px;">Цены на залы</h2>
+            <div id="adminPrices" class="booking-form" style="background: #fff; padding: 20px; border: 1px solid var(--line);">
+              <!-- Сюда JS вставит инпуты для цен -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

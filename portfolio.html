@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f3ec">
+  <meta name="description" content="Портреты, семейные истории, съёмки для двоих и fashion. Посмотрите работы фотостудии КАДР.">
+  <title>КАДР — Портфолио</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="portfolio" id="top">
+  <a class="skip-link" href="#main">К содержимому</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="КАДР — главная"><svg class="brand-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M12 3H3v9M20 3h9v9M29 20v9h-9M12 29H3v-9" stroke="currentColor" stroke-width="2.5"/><circle cx="16" cy="16" r="5" fill="currentColor"/></svg><span class="brand-name">КАДР<span class="brand-caption">PHOTO STUDIO</span></span></a>
+      <nav class="site-nav" id="site-nav" aria-label="Основная навигация"><a href="index.html">Главная</a><a href="spaces.html">Залы</a><a href="services.html">Услуги и цены</a><a href="portfolio.html" aria-current="page">Портфолио</a><a href="about.html">О студии</a><a href="contacts.html">Контакты</a></nav>
+      <div class="header-actions">
+        <button class="icon-button search-toggle" type="button" data-open-search aria-label="Поиск по сайту"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" stroke-width="1.5"/><path d="m16 16 5 5" stroke="currentColor" stroke-width="1.5"/></svg></button>
+        <a class="button button-dark header-booking" href="contacts.html#form">Забронировать <span aria-hidden="true">↗</span></a>
+        <button class="menu-toggle icon-button" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="site-nav"><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+  <main id="main"><section class="page-intro container">
+  <p class="eyebrow">Снято в КАДРЕ</p>
+  <div class="heading-row"><h1 class="page-heading">Люди. Свет.<br>Настоящее.</h1><p class="muted">У каждой съёмки свой ритм.<br>Посмотрите, что получается, когда всё совпадает.</p></div>
+</section>
+
+<section class="container section" aria-label="Портфолио студии">
+  <div class="filter-bar" role="group" aria-label="Категории фотографий">
+    <button type="button" data-filter="all" aria-pressed="true">Все работы <span>11</span></button>
+    <button type="button" data-filter="portrait" aria-pressed="false">Портрет</button>
+    <button type="button" data-filter="family" aria-pressed="false">Семья</button>
+    <button type="button" data-filter="love" aria-pressed="false">Love story</button>
+    <button type="button" data-filter="fashion" aria-pressed="false">Fashion</button>
+  </div>
+  <p class="muted gallery-hint">Нажмите на фотографию, чтобы рассмотреть её ближе.</p>
+  <p id="galleryStatus" role="status" aria-live="polite"></p>
+  <div class="gallery-grid">
+    <button class="gallery-item" type="button" data-category="fashion" data-gallery="img/23.webp" aria-label="Открыть: fashion-портрет на серебристом фоне"><img src="img/23.webp" alt="Модель в чёрном платье на серебристом фоне" width="1280" height="1920" loading="lazy"><span class="gallery-caption">Свой характер <span>01 / Fashion</span></span></button>
+    <button class="gallery-item" type="button" data-category="fashion" data-gallery="img/25.webp" aria-label="Открыть: модель в красном платье"><img src="img/25.webp" alt="Модель в выразительном красном платье в классическом интерьере" width="1280" height="1920" loading="lazy"><span class="gallery-caption">Красный акцент <span>02 / Fashion</span></span></button>
+    <button class="gallery-item" type="button" data-category="love" data-gallery="img/24.webp" aria-label="Открыть: свадебный портрет пары"><img src="img/24.webp" alt="Свадебная пара в светлом зале у окна" width="1080" height="1350" loading="lazy"><span class="gallery-caption">Только вы <span>03 / Love story</span></span></button>
+    <button class="gallery-item" type="button" data-category="family" data-gallery="img/21.webp" aria-label="Открыть: семейная съёмка с собакой"><img src="img/21.webp" alt="Родители с ребёнком и собакой в светлом интерьере" width="1354" height="1920" loading="lazy"><span class="gallery-caption">Все в сборе <span>04 / Семья</span></span></button>
+    <button class="gallery-item" type="button" data-category="family" data-gallery="img/26.webp" aria-label="Открыть: детский портрет с собакой"><img src="img/26.webp" alt="Ребёнок обнимает собаку во время домашней по настроению съёмки" width="1280" height="1920" loading="lazy"><span class="gallery-caption">Маленькое счастье <span>05 / Семья</span></span></button>
+    <button class="gallery-item" type="button" data-category="family" data-gallery="img/22.webp" aria-label="Открыть: мама с ребёнком"><img src="img/22.webp" alt="Мама и маленький ребёнок в тёплом светлом интерьере" width="626" height="852" loading="lazy"><span class="gallery-caption">Самое близкое <span>06 / Семья</span></span></button>
+    <button class="gallery-item" type="button" data-category="portrait" data-gallery="img/11.webp" aria-label="Открыть: портрет в тёплом свете"><img src="img/11.webp" alt="Женский портрет в кресле при тёплом направленном свете" width="1142" height="1920" loading="lazy"><span class="gallery-caption">Тихий момент <span>07 / Портрет</span></span></button>
+    <button class="gallery-item" type="button" data-category="portrait" data-gallery="img/12.webp" aria-label="Открыть: портрет в солнечном пространстве"><img src="img/12.webp" alt="Портрет в просторном зале с большими окнами и солнечными тенями" width="1206" height="1788" loading="lazy"><span class="gallery-caption">Поймать свет <span>08 / Портрет</span></span></button>
+    <button class="gallery-item" type="button" data-category="family" data-gallery="img/18.webp" aria-label="Открыть: семейная история в праздничном интерьере"><img src="img/18.webp" alt="Семья в праздничном интерьере студии" width="1358" height="1920" loading="lazy"><span class="gallery-caption">Семейная история <span>09 / Семья</span></span></button>
+    <button class="gallery-item" type="button" data-category="love" data-gallery="img/19.webp" aria-label="Открыть: пара у новогодней ёлки"><img src="img/19.webp" alt="Пара сидит рядом у новогодней ёлки" width="1362" height="1920" loading="lazy"><span class="gallery-caption">Быть рядом <span>10 / Love story</span></span></button>
+    <button class="gallery-item" type="button" data-category="love" data-gallery="img/20.webp" aria-label="Открыть: пара смеётся вместе"><img src="img/20.webp" alt="Мужчина и женщина смеются вместе во время съёмки" width="1369" height="1920" loading="lazy"><span class="gallery-caption">В одном ритме <span>11 / Love story</span></span></button>
+  </div>
+</section>
+
+<section class="cta-band"><div class="container heading-row"><div><p class="eyebrow">Следующая история — ваша</p><h2 class="section-heading">Попадём в кадр?</h2></div><a class="button button-dark" href="contacts.html#form">Хочу такую съёмку <span class="arrow">↗</span></a></div></section>
+</main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top"><p class="eyebrow">Свет найдётся. Идея — за вами.</p><a class="text-link" href="contacts.html#form">Давайте создадим что-то вместе <span aria-hidden="true">↗</span></a></div>
+      <div class="footer-wordmark" aria-hidden="true">КАДР<span>®</span><small>PHOTO<br>STUDIO</small></div>
+      <div class="footer-grid">
+        <p class="footer-description">Пространство, в котором<br>ваши идеи становятся кадрами.</p>
+        <nav aria-label="Навигация в подвале"><a href="spaces.html">Наши залы</a><a href="services.html">Услуги и цены</a><a href="portfolio.html">Портфолио</a><a href="about.html">О студии</a></nav>
+        <div><span class="footer-label">Заходите в гости</span><p>Москва, ул. Большая, 25</p><a href="https://yandex.ru/maps/?text=Москва%2C%20ул.%20Большая%2C%2025" target="_blank" rel="noopener noreferrer">Открыть карту <span aria-hidden="true">↗</span></a></div>
+        <div><span class="footer-label">Обсудим вашу съёмку</span><a href="tel:+79991234567">+7 (999) 123-45-67</a><a href="mailto:hello@kadr-studio.ru">hello@kadr-studio.ru</a></div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 КАДР Photo Studio</span><span>Снято с любовью к свету.</span><a href="#top">Наверх ↑</a></div>
+    </div>
+  </footer>
+  <button class="back-top icon-button" type="button" aria-label="Вернуться наверх" hidden>↑</button>
+  <dialog class="search-dialog" id="searchDialog" aria-labelledby="searchTitle">
+    <div class="dialog-heading"><h2 id="searchTitle">Что ищем?</h2><button class="icon-button" type="button" data-close-dialog aria-label="Закрыть поиск">×</button></div>
+    <label class="sr-only" for="searchInput">Поиск по сайту</label><input id="searchInput" type="search" placeholder="Зал, съёмка, услуга…" autocomplete="off">
+    <div id="searchResults" class="search-results" aria-live="polite"><p class="muted">Например: «loft», «портрет» или «цены».</p></div>
+  </dialog>
+  <dialog class="gallery-dialog" id="galleryDialog" aria-label="Просмотр фотографии">
+    <button class="icon-button gallery-close" type="button" data-close-dialog aria-label="Закрыть фотографию">×</button>
+    <button class="icon-button gallery-prev" type="button" data-gallery-prev aria-label="Предыдущая фотография">←</button>
+    <figure><img id="galleryImage" alt=""><figcaption><span id="galleryCaption"></span><span id="galleryCount"></span></figcaption></figure>
+    <button class="icon-button gallery-next" type="button" data-gallery-next aria-label="Следующая фотография">→</button>
+  </dialog>
+</body>
+</html>
