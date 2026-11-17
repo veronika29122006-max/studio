@@ -28,16 +28,53 @@
   <aside class="contact-details"><p class="eyebrow">Мы на связи</p><a class="contact-phone" href="tel:+79991234567">+7 (999) 123-45-67</a><a class="contact-email" href="mailto:hello@kadr-studio.ru">hello@kadr-studio.ru <span aria-hidden="true">↗</span></a><div class="contact-address"><p class="eyebrow">Заходите в гости</p><p>Москва,<br>ул. Большая, 25</p><a class="text-link" href="https://yandex.ru/maps/?text=Москва%2C%20ул.%20Большая%2C%2025" target="_blank" rel="noopener noreferrer">Открыть в Яндекс Картах <span aria-hidden="true">↗</span></a></div><figure class="contact-photo"><img src="img/2.webp" width="1206" height="801" loading="lazy" alt="Солнечное пространство фотостудии КАДР"><figcaption>Здесь может начаться ваша история.</figcaption></figure></aside>
   <div class="booking-panel"><div class="booking-panel-heading"><span class="eyebrow">01 / План съёмки</span><span aria-hidden="true">↗</span></div><h2>Соберём вашу съёмку</h2><p class="muted booking-intro">Выберите зал и сохраните детали. Затем отправьте их нам по электронной почте или позвоните, чтобы согласовать время.</p>
     <form id="contactForm" class="booking-form">
-      <div class="form-grid"><div class="field"><label for="name">Как к вам обращаться <span>*</span></label><input id="name" name="name" type="text" placeholder="Ваше имя" autocomplete="name" maxlength="80" required></div><div class="field"><label for="phone">Телефон <span>*</span></label><input id="phone" name="phone" type="tel" placeholder="+7 (___) ___-__-__" autocomplete="tel" maxlength="25" required></div></div>
-      <div class="field"><label for="email">Электронная почта <span>*</span></label><input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" maxlength="120" required></div>
-      <div class="form-grid"><div class="field"><label for="hall">Зал <span>*</span></label><select id="hall" name="hall" required><option value="">Выберите пространство</option><option value="LOFT" data-price="1500">LOFT — от 1 500 ₽ / ч</option><option value="MINIMAL" data-price="1700">MINIMAL — от 1 700 ₽ / ч</option><option value="CLASSIC" data-price="1900">CLASSIC — от 1 900 ₽ / ч</option><option value="WHITE" data-price="2100">WHITE — от 2 100 ₽ / ч</option><option value="DARK" data-price="2300">DARK — от 2 300 ₽ / ч</option><option value="VINTAGE" data-price="2500">VINTAGE — от 2 500 ₽ / ч</option></select></div><div class="field"><label for="duration">Продолжительность <span>*</span></label><select id="duration" name="duration" required><option value="1">1 час</option><option value="2" selected>2 часа</option><option value="3">3 часа</option><option value="4">4 часа</option><option value="6">6 часов</option><option value="8">8 часов</option></select></div></div>
-      <div class="form-grid"><div class="field"><label for="date">Желаемая дата <span>*</span></label><input id="date" name="date" type="date" required></div><div class="field"><label for="time">Начало съёмки <span>*</span></label><input id="time" name="time" type="time" required></div></div>
-      <div class="field"><label for="comment">Расскажите об идее</label><textarea id="comment" name="comment" rows="3" maxlength="2000" placeholder="Какая съёмка задумана? Нужен ли фотограф или визажист?"></textarea></div>
-      <div class="booking-estimate" aria-live="polite"><div><span class="eyebrow">Ориентир по аренде</span><p id="bookingSelection">Выберите зал и длительность</p></div><strong id="bookingEstimate">— ₽</strong></div>
-      <p class="form-note">Расчёт предварительный, без дополнительных услуг. Доступность зала и окончательную стоимость подтвердит администратор.</p>
-      <button class="button button-dark form-submit" type="submit">Сохранить план съёмки <span aria-hidden="true">↗</span></button><p class="form-note">Детали сохранятся только в этом браузере. Автоматической отправки нет — на следующем шаге можно подготовить письмо.</p>
-      <div class="draft-actions"><p id="draftNotice" class="form-note" role="status" aria-live="polite"></p><button class="text-link" type="button" data-clear-draft>Очистить черновик</button></div>
-    </form>
+  <div class="form-grid">
+    <div class="field"><label for="name">Как к вам обращаться <span>*</span></label><input id="name" name="name" type="text" placeholder="Ваше имя" autocomplete="name" maxlength="80" required></div>
+    <div class="field"><label for="phone">Телефон <span>*</span></label><input id="phone" name="phone" type="tel" placeholder="+7 (___) ___-__-__" autocomplete="tel" maxlength="25" required></div>
+  </div>
+  <div class="field"><label for="email">Электронная почта <span>*</span></label><input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" maxlength="120" required></div>
+  <div class="form-grid">
+    <div class="field"><label for="hall">Зал <span>*</span></label><select id="hall" name="hall" required><option value="">Выберите пространство</option><option value="LOFT" data-price="1500">LOFT — от 1 500 ₽ / ч</option><option value="MINIMAL" data-price="1700">MINIMAL — от 1 700 ₽ / ч</option><option value="CLASSIC" data-price="1900">CLASSIC — от 1 900 ₽ / ч</option><option value="WHITE" data-price="2100">WHITE — от 2 100 ₽ / ч</option><option value="DARK" data-price="2300">DARK — от 2 300 ₽ / ч</option><option value="VINTAGE" data-price="2500">VINTAGE — от 2 500 ₽ / ч</option></select></div>
+    <div class="field"><label for="duration">Продолжительность <span>*</span></label><select id="duration" name="duration" required><option value="1">1 час</option><option value="2" selected>2 часа</option><option value="3">3 часа</option><option value="4">4 часа</option><option value="6">6 часов</option><option value="8">8 часов</option></select></div>
+  </div>
+  <div class="form-grid">
+    <div class="field"><label for="date">Желаемая дата <span>*</span></label><input id="date" name="date" type="date" required></div>
+    <div class="field"><label for="time">Начало съёмки <span>*</span></label><input id="time" name="time" type="time" required></div>
+  </div>
+  <div class="field"><label for="comment">Расскажите об идее</label><textarea id="comment" name="comment" rows="3" maxlength="2000" placeholder="Какая съёмка задумана? Нужен ли фотограф или визажист?"></textarea></div>
+  <div class="booking-estimate" aria-live="polite">
+    <div><span class="eyebrow">Ориентир по аренде</span><p id="bookingSelection">Выберите зал и длительность</p></div>
+    <strong id="bookingEstimate">— ₽</strong>
+  </div>
+  <p class="form-note">Расчёт предварительный, без дополнительных услуг. Доступность зала и окончательную стоимость подтвердит администратор.</p>
+  <button class="button button-dark form-submit" type="submit">Сохранить план съёмки <span aria-hidden="true">↗</span></button>
+  <p class="form-note">Детали сохранятся только в этом браузере. Автоматической отправки нет — на следующем шаге можно подготовить письмо.</p>
+  <div class="draft-actions">
+    <p id="draftNotice" class="form-note" role="status" aria-live="polite"></p>
+    <button class="text-link" type="button" data-clear-draft>Очистить черновик</button>
+  </div>
+</form>
+
+<!-- БЛОК ОПЛАТЫ (скрыт по умолчанию) -->
+<div id="paymentBlock" class="booking-form" style="display: none; margin-top: 20px; padding: 20px; border: 1px solid #ccc; border-radius: 8px;">
+  <h3 style="margin-bottom: 15px;">Оплата</h3>
+  <div class="field">
+    <label for="cardNumber">Номер карты</label>
+    <input id="cardNumber" type="text" placeholder="0000 0000 0000 0000" maxlength="19">
+  </div>
+  <div class="form-grid">
+    <div class="field">
+      <label for="cardExpiry">Срок действия</label>
+      <input id="cardExpiry" type="text" placeholder="ММ/ГГ" maxlength="5">
+    </div>
+    <div class="field">
+      <label for="cardCvv">CVV</label>
+      <input id="cardCvv" type="password" placeholder="***" maxlength="3">
+    </div>
+  </div>
+  <button type="button" id="payButton" class="button button-dark" style="width: 100%; margin-top: 10px;">Оплатить <span aria-hidden="true">↗</span></button>
+  <p id="paymentStatus" style="margin-top: 10px; font-size: 13px;"></p>
+</div>
     <div id="formSuccess" class="form-success" role="status" hidden><span class="success-icon" aria-hidden="true">✓</span><h3>План съёмки сохранён</h3><p>Это локальный черновик — студия ещё не получила заявку. Откройте готовое письмо и отправьте его из своего почтового приложения. Бронирование подтвердит администратор.</p><a id="bookingMail" class="button button-dark" href="mailto:hello@kadr-studio.ru">Открыть письмо для студии <span aria-hidden="true">↗</span></a><a class="text-link" href="tel:+79991234567">Позвонить +7 (999) 123-45-67</a><button class="text-link" type="button" data-new-booking>Изменить план съёмки</button></div>
   </div>
 </section>
