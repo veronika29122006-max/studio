@@ -637,4 +637,63 @@
     }
 
   }); 
+  // === ИМИТАЦИЯ ОПЛАТЫ ===
+document.addEventListener('DOMContentLoaded', () => {
+  const paymentBlock = document.getElementById('paymentBlock');
+  const payButton = document.getElementById('payButton');
+  const paymentStatus = document.getElementById('paymentStatus');
+  const formSuccess = document.getElementById('formSuccess');
+  const contactForm = document.getElementById('contactForm');
+
+  // Показываем блок оплаты после успешного сохранения плана съёмки
+  if (formSuccess && paymentBlock) {
+    // Используем MutationObserver, чтобы отследить, когда форма скроется и появится сообщение об успехе
+    const observer = new MutationObserver(() => {
+      if (!formSuccess.hidden) {
+        paymentBlock.style.display = 'block';
+        paymentBlock.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    });
+    observer.observe(formSuccess, { attributes: true, attributeFilter: ['hidden'] });
+  }
+
+  // Обработчик кнопки «Оплатить»
+  if (payButton) {
+    payButton.addEventListener('click', () => {
+      const cardNumber = document.getElementById('cardNumber').value.replace(/\s/g, '');
+      const expiry = document.getElementById('cardExpiry').value;
+      const cvv = document.getElementById('cardCvv').value;
+
+      // Валидация (простая)
+      if (cardNumber.length !== 16 || !/^\d+$/.test(cardNumber)) {
+        paymentStatus.textContent = 'Ошибка: введите 16 цифр номера карты.';
+        paymentStatus.style.color = 'red';
+        return;
+      }
+      if (!/^\d{2}\/\d{2}$/.test(expiry)) {
+        paymentStatus.textContent = 'Ошибка: введите срок действия в формате ММ/ГГ.';
+        paymentStatus.style.color = 'red';
+        return;
+      }
+      if (cvv.length !== 3 || !/^\d+$/.test(cvv)) {
+        paymentStatus.textContent = 'Ошибка: CVV должен содержать 3 цифры.';
+        paymentStatus.style.color = 'red';
+        return;
+      }
+
+      // Имитация успешной оплаты
+      paymentStatus.textContent = 'Оплата прошла успешно! Спасибо.';
+      paymentStatus.style.color = 'green';
+      payButton.disabled = true;
+      payButton.textContent = 'Оплачено';
+
+      // Обновляем статус заявки в localStorage (если она есть)
+      const orders = JSON.parse(localStorage.getItem('kadr_orders') || '[]');
+      if (orders.length > 0) {
+        orders[orders.length - 1].status = 'Оплачена';
+        localStorage.setItem('kadr_orders', JSON.stringify(orders));
+      }
+    });
+  }
+});
 })(); 
